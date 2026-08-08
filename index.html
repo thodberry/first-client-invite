@@ -563,7 +563,7 @@
 <!-- ═══════════ INTRO OVERLAY ═══════════ -->
 <div id="intro">
   <video id="intro-vid"
-    src="/assets/intro-video-new-DxZv61I0.mp4"
+    src="/assets/intro-video-v2.mp4"
     playsinline preload="auto">
   </video>
   <span id="tap-label">Tap to open</span>
@@ -823,7 +823,7 @@
     musicBtn.style.display = 'flex';
     bgm.play().catch(function () {});
     vid.play().then(function () {
-      timer = setTimeout(enterPage, 3000);
+      timer = setTimeout(enterPage, 3500);
     }).catch(function () {
       enterPage();
     });
