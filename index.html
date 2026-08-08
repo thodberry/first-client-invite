@@ -543,10 +543,9 @@
 
   <!-- ── HERO ── -->
   <section class="hero">
-    <video class="hero-video"
+    <video class="hero-video" id="hero-bg"
       src="/assets/hero.mp4"
-      poster="/assets/hero-poster.jpg"
-      autoplay muted loop playsinline preload="auto">
+      muted loop playsinline preload="auto">
     </video>
     <div class="hero-overlay"></div>
 
@@ -730,6 +729,7 @@
   var tap      = document.getElementById('tap-label');
   var page     = document.getElementById('page');
   var bgm      = document.getElementById('bgm');
+  var heroBg   = document.getElementById('hero-bg');
   var musicBtn = document.getElementById('music-btn');
   var iconOn   = document.getElementById('icon-on');
   var iconOff  = document.getElementById('icon-off');
@@ -758,6 +758,12 @@
     musicBtn.style.borderColor = 'rgba(120,80,30,0.4)';
     iconOn.style.stroke  = '#7A5628';
     iconOff.style.stroke = '#7A5628';
+    
+    // Play hero background video now that transition started
+    if (heroBg) {
+      heroBg.play().catch(function(){});
+    }
+
     setTimeout(function () { intro.classList.add('gone'); }, 1050);
   }
 
