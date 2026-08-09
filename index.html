@@ -38,6 +38,10 @@
       overflow-x: hidden;
     }
 
+    body.locked {
+      overflow: hidden;
+    }
+
     /* Paper texture background applied to all content below hero */
     #page > *:not(.hero) {
       background-image: var(--paper-bg);
@@ -586,7 +590,7 @@
     }
   </style>
 </head>
-<body>
+<body class="locked">
 
 <!-- WATERMARK -->
 <div class="watermark" aria-hidden="true">
@@ -834,6 +838,7 @@
     if (timer) clearTimeout(timer);
     intro.classList.add('fading');
     page.classList.add('show');
+    document.body.classList.remove('locked');
     // Button style: switch to light style for paper background
     musicBtn.style.background = 'rgba(255,255,255,0.82)';
     musicBtn.style.borderColor = 'rgba(120,80,30,0.4)';
