@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="es" translate="no" style="color-scheme: dark only">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Chosen Wife &ndash; El Olimpo Desciende a Sat&eacute;lite</title>
-  <meta name="description" content="Est&aacute;s invitado a la primera BODA INMERSIVA E MITOL&Oacute;GICA de M&eacute;xico &ndash; The Chosen Wife" />
+  <meta name="description"
+    content="Est&aacute;s invitado a la primera BODA INMERSIVA E MITOL&Oacute;GICA de M&eacute;xico &ndash; The Chosen Wife" />
   <meta name="google" content="notranslate" />
   <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,24 +14,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --gold:       #9A7040;
-      --gold-light: #7A5628;
-      --gold-dim:   rgba(120,80,30,0.2);
-      --black:      #000;
-      --deep:       #07070A;
-      --surface:    rgba(255,255,255,0.35);
-      --surface2:   rgba(255,255,255,0.25);
-      --text:       #1A1208;
-      --muted:      #5A4530;
-      --font-script: 'leander-script-pro', 'Great Vibes', cursive;
-      --font-body:   'arek-armenian', serif;
-      --paper-bg:   url('assets/white-textured-paper-KasY8RAJ.png');
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --gold: #9A7040;
+      --gold-light: #7A5628;
+      --gold-dim: rgba(120, 80, 30, 0.2);
+      --black: #000;
+      --deep: #07070A;
+      --surface: rgba(255, 255, 255, 0.35);
+      --surface2: rgba(255, 255, 255, 0.25);
+      --text: #1A1208;
+      --muted: #5A4530;
+      --font-script: 'leander-script-pro', 'Great Vibes', cursive;
+      --font-body: 'arek-armenian', serif;
+      --paper-bg: url('assets/white-textured-paper-KasY8RAJ.png');
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--deep);
@@ -43,7 +53,7 @@
     }
 
     /* Paper texture background applied to all content below hero */
-    #page > *:not(.hero) {
+    #page>*:not(.hero) {
       background-image: var(--paper-bg);
       background-size: cover;
       background-attachment: fixed;
@@ -64,13 +74,21 @@
       padding-bottom: 2.8rem;
       transition: opacity 1s ease;
     }
-    #intro.fading { opacity: 0; pointer-events: none; }
-    #intro.gone   { display: none; }
+
+    #intro.fading {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #intro.gone {
+      display: none;
+    }
 
     #intro-vid {
       position: absolute;
       inset: 0;
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -84,9 +102,17 @@
       color: var(--gold);
       animation: blink 2.4s ease-in-out infinite;
     }
+
     @keyframes blink {
-      0%,100% { opacity: 0.35; }
-      50%      { opacity: 1; }
+
+      0%,
+      100% {
+        opacity: 0.35;
+      }
+
+      50% {
+        opacity: 1;
+      }
     }
 
     /* ══════════════════════════════════════
@@ -96,7 +122,10 @@
       opacity: 0;
       transition: opacity 1s ease;
     }
-    #page.show { opacity: 1; }
+
+    #page.show {
+      opacity: 1;
+    }
 
     /* ══════════════════════════════════════
        HERO — fullscreen background video
@@ -116,7 +145,8 @@
     .hero-video {
       position: absolute;
       inset: 0;
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       opacity: 0.55;
     }
@@ -124,12 +154,10 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.3) 0%,
-        rgba(0,0,0,0.1) 40%,
-        rgba(0,0,0,0.5) 100%
-      );
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(0, 0, 0, 0.1) 40%,
+          rgba(0, 0, 0, 0.5) 100%);
     }
 
     .hero-content {
@@ -147,7 +175,7 @@
       height: auto;
       object-fit: contain;
       margin-bottom: 2rem;
-      filter: drop-shadow(0 4px 15px rgba(0,0,0,0.8));
+      filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.8));
       animation: fadeUp 1s ease both;
       z-index: 2;
     }
@@ -168,7 +196,7 @@
       text-transform: uppercase;
       color: #050505;
       margin-bottom: 2rem;
-      text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 4px rgba(255,255,255,0.9);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.9);
       animation: fadeUp 1s 0.18s ease both;
     }
 
@@ -180,7 +208,7 @@
       color: #fff;
       max-width: 44rem;
       line-height: 1.5;
-      text-shadow: 0 3px 6px rgba(0,0,0,0.9), 0 5px 25px rgba(0,0,0,0.8);
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9), 0 5px 25px rgba(0, 0, 0, 0.8);
       animation: fadeUp 1s 0.28s ease both;
     }
 
@@ -196,6 +224,7 @@
       gap: 0.4rem;
       animation: fadeIn 2s 1s ease both;
     }
+
     .scroll-hint span {
       font-family: var(--font-body);
       font-size: 0.52rem;
@@ -203,6 +232,7 @@
       text-transform: uppercase;
       color: var(--gold);
     }
+
     .scroll-hint::after {
       content: '';
       width: 1px;
@@ -211,12 +241,25 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     /* ══════════════════════════════════════
@@ -225,7 +268,7 @@
     .sep {
       width: 100%;
       height: 1px;
-      background: linear-gradient(to right, transparent, rgba(120,80,30,0.3), transparent);
+      background: linear-gradient(to right, transparent, rgba(120, 80, 30, 0.3), transparent);
     }
 
     .inner {
@@ -258,12 +301,14 @@
     /* ══════════════════════════════════════
        EL CONCEPTO
     ══════════════════════════════════════ */
-    .concepto-wrap { background: transparent; }
+    .concepto-wrap {
+      background: transparent;
+    }
 
     .concepto-list {
-      border: 1px solid rgba(120,80,30,0.25);
+      border: 1px solid rgba(120, 80, 30, 0.25);
       overflow: hidden;
-      background: rgba(255,255,255,0.45);
+      background: rgba(255, 255, 255, 0.45);
       backdrop-filter: blur(2px);
     }
 
@@ -272,7 +317,7 @@
       align-items: center;
       gap: 1.1rem;
       padding: 1.3rem 2rem;
-      border-bottom: 1px solid rgba(120,80,30,0.12);
+      border-bottom: 1px solid rgba(120, 80, 30, 0.12);
       font-family: var(--font-body);
       font-size: clamp(0.72rem, 2vw, 0.88rem);
       font-weight: 700;
@@ -281,37 +326,63 @@
       color: var(--text);
       transition: background 0.25s;
     }
-    .c-item:last-child { border-bottom: none; }
-    .c-item:hover { background: rgba(120,80,30,0.06); }
+
+    .c-item:last-child {
+      border-bottom: none;
+    }
+
+    .c-item:hover {
+      background: rgba(120, 80, 30, 0.06);
+    }
 
     .c-icon {
       width: 2.2rem;
       height: auto;
       flex-shrink: 0;
       object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(120,80,30,0.25));
+      filter: drop-shadow(0 2px 4px rgba(120, 80, 30, 0.25));
       transition: transform 0.3s, filter 0.3s;
     }
-    
+
     .c-item:hover .c-icon {
       transform: scale(1.1);
-      filter: drop-shadow(0 3px 6px rgba(120,80,30,0.4));
+      filter: drop-shadow(0 3px 6px rgba(120, 80, 30, 0.4));
     }
 
     /* ══════════════════════════════════════
        ELEGIDA
     ══════════════════════════════════════ */
-    .elegida-wrap { background: transparent; }
+    .elegida-wrap {
+      background: transparent;
+    }
 
     .elegida-box {
-      border: 1px solid rgba(120,80,30,0.28);
+      border: 1px solid rgba(120, 80, 30, 0.28);
       padding: 3.5rem 2.5rem;
       position: relative;
-      background: rgba(255,255,255,0.5);
+      background: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(2px);
     }
-    .elegida-box::before { content: '✦'; position: absolute; top: 1.2rem; left: 1.8rem; color: var(--gold); font-size: 0.7rem; opacity: 0.55; }
-    .elegida-box::after  { content: '✦'; position: absolute; bottom: 1.2rem; right: 1.8rem; color: var(--gold); font-size: 0.7rem; opacity: 0.55; }
+
+    .elegida-box::before {
+      content: '✦';
+      position: absolute;
+      top: 1.2rem;
+      left: 1.8rem;
+      color: var(--gold);
+      font-size: 0.7rem;
+      opacity: 0.55;
+    }
+
+    .elegida-box::after {
+      content: '✦';
+      position: absolute;
+      bottom: 1.2rem;
+      right: 1.8rem;
+      color: var(--gold);
+      font-size: 0.7rem;
+      opacity: 0.55;
+    }
 
     .elegida-title {
       font-family: var(--font-body);
@@ -328,17 +399,20 @@
       font-size: clamp(1rem, 2.2vw, 1.15rem);
       font-weight: 400;
       line-height: 1.8;
-      color: rgba(30,18,5,0.78);
+      color: rgba(30, 18, 5, 0.78);
     }
-    .elegida-body + .elegida-body { margin-top: 1.1rem; }
+
+    .elegida-body+.elegida-body {
+      margin-top: 1.1rem;
+    }
 
     /* ══════════════════════════════════════
        LA SEDE
     ══════════════════════════════════════ */
     .sede-wrap {
-      background: rgba(255,255,255,0.3);
-      border-top: 1px solid rgba(120,80,30,0.2);
-      border-bottom: 1px solid rgba(120,80,30,0.2);
+      background: rgba(255, 255, 255, 0.3);
+      border-top: 1px solid rgba(120, 80, 30, 0.2);
+      border-bottom: 1px solid rgba(120, 80, 30, 0.2);
       padding: 5rem 1.5rem;
       text-align: center;
     }
@@ -352,6 +426,7 @@
       color: var(--text);
       line-height: 1.2;
     }
+
     .sede-sub {
       font-family: var(--font-body);
       font-size: clamp(0.85rem, 2vw, 1.05rem);
@@ -365,7 +440,7 @@
       margin-top: 1.5rem;
       font-size: clamp(0.82rem, 1.8vw, 0.95rem);
       font-style: italic;
-      color: rgba(80,55,25,0.65);
+      color: rgba(80, 55, 25, 0.65);
       line-height: 1.75;
     }
 
@@ -377,30 +452,36 @@
       letter-spacing: 0.48em;
       text-transform: uppercase;
       color: var(--gold);
-      border: 1px solid rgba(120,80,30,0.38);
+      border: 1px solid rgba(120, 80, 30, 0.38);
       padding: 0.7rem 2rem;
       text-decoration: none;
       transition: background 0.3s, color 0.3s;
     }
-    .maps-btn:hover { background: var(--gold); color: #fff; }
+
+    .maps-btn:hover {
+      background: var(--gold);
+      color: #fff;
+    }
 
     /* ══════════════════════════════════════
        PREVENTA / PRICING
     ══════════════════════════════════════ */
-    .pricing-wrap { background: transparent; }
+    .pricing-wrap {
+      background: transparent;
+    }
 
     .price-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1px;
-      background: rgba(120,80,30,0.2);
-      border: 1px solid rgba(120,80,30,0.2);
+      background: rgba(120, 80, 30, 0.2);
+      border: 1px solid rgba(120, 80, 30, 0.2);
       margin: 2.8rem auto 0;
       max-width: 40rem;
     }
 
     .price-card {
-      background: rgba(255,255,255,0.55);
+      background: rgba(255, 255, 255, 0.55);
       padding: 2.5rem 1.5rem;
       text-align: center;
       display: flex;
@@ -416,6 +497,7 @@
       text-transform: uppercase;
       color: var(--gold);
     }
+
     .p-amount {
       font-family: var(--font-body);
       font-size: clamp(2.2rem, 6vw, 3.4rem);
@@ -423,11 +505,13 @@
       color: var(--gold-light);
       line-height: 1;
     }
+
     .p-currency {
       font-size: 0.6rem;
       letter-spacing: 0.3em;
       color: var(--muted);
     }
+
     .p-per {
       font-size: 0.82rem;
       font-style: italic;
@@ -440,7 +524,7 @@
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       font-weight: 400;
       line-height: 1.78;
-      color: rgba(30,18,5,0.7);
+      color: rgba(30, 18, 5, 0.7);
       max-width: 40rem;
       margin-left: auto;
       margin-right: auto;
@@ -455,8 +539,8 @@
       color: var(--gold-light);
       margin-top: 2rem;
       padding: 1rem 0;
-      border-top: 1px solid rgba(120,80,30,0.22);
-      border-bottom: 1px solid rgba(120,80,30,0.22);
+      border-top: 1px solid rgba(120, 80, 30, 0.22);
+      border-bottom: 1px solid rgba(120, 80, 30, 0.22);
       max-width: 40rem;
       margin-left: auto;
       margin-right: auto;
@@ -466,7 +550,7 @@
        GARANTIA
     ══════════════════════════════════════ */
     .garantia-wrap {
-      background: rgba(255,255,255,0.3);
+      background: rgba(255, 255, 255, 0.3);
       padding: 4.5rem 1.5rem;
       text-align: center;
     }
@@ -475,7 +559,7 @@
       font-style: italic;
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       line-height: 1.75;
-      color: rgba(30,18,5,0.72);
+      color: rgba(30, 18, 5, 0.72);
       max-width: 38rem;
       margin: 0 auto;
     }
@@ -510,7 +594,7 @@
       font-size: 0.6rem;
       letter-spacing: 0.42em;
       text-transform: uppercase;
-      color: rgba(120,80,30,0.38);
+      color: rgba(120, 80, 30, 0.38);
     }
 
     /* ══════════════════════════════════════
@@ -521,24 +605,48 @@
       transform: translateY(26px);
       transition: opacity 0.85s ease, transform 0.85s ease;
     }
-    .r.in { opacity: 1; transform: none; }
-    .r.d1 { transition-delay: 0.1s; }
-    .r.d2 { transition-delay: 0.22s; }
-    .r.d3 { transition-delay: 0.34s; }
+
+    .r.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .r.d1 {
+      transition-delay: 0.1s;
+    }
+
+    .r.d2 {
+      transition-delay: 0.22s;
+    }
+
+    .r.d3 {
+      transition-delay: 0.34s;
+    }
 
     @media (max-width: 460px) {
-      .price-grid { grid-template-columns: 1fr; }
-      .c-item { font-size: 0.68rem; padding: 1.2rem 1.2rem; }
-      .elegida-box { padding: 2.5rem 1.2rem; }
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .c-item {
+        font-size: 0.68rem;
+        padding: 1.2rem 1.2rem;
+      }
+
+      .elegida-box {
+        padding: 2.5rem 1.2rem;
+      }
     }
-    
+
     /* ══════════════════════════════════════
        WATERMARK
     ══════════════════════════════════════ */
     .watermark {
       position: fixed;
-      top: -50%; left: -50%;
-      width: 200%; height: 200%;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
       z-index: 999999;
       pointer-events: none;
       display: flex;
@@ -549,6 +657,7 @@
       opacity: 0.18;
       user-select: none;
     }
+
     .watermark span {
       font-family: var(--font-body), sans-serif;
       font-size: clamp(3rem, 5vw, 5rem);
@@ -561,175 +670,174 @@
     }
   </style>
 </head>
+
 <body class="locked">
 
-<!-- WATERMARK -->
-<div class="watermark" aria-hidden="true">
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
-</div>
+  <!-- WATERMARK -->
+  <div class="watermark" aria-hidden="true">
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+    <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  </div>
 
-<!-- ═══════════ INTRO OVERLAY ═══════════ -->
-<div id="intro">
-  <video id="intro-vid"
-    src="Untitled video (2).mp4"
-    playsinline preload="auto">
-  </video>
-  <span id="tap-label">Tap to open</span>
-</div>
-
-<!-- ═══════════ MAIN PAGE ═══════════ -->
-<div id="page">
-
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <video class="hero-video" id="hero-bg"
-      src="zeees.mp4"
-      muted loop playsinline preload="auto">
+  <!-- ═══════════ INTRO OVERLAY ═══════════ -->
+  <div id="intro">
+    <video id="intro-vid" src="Untitled video (2).mp4" playsinline preload="auto">
     </video>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <img src="zues.png" alt="ZEUS The Chosen Wife" class="hero-logo" />
-      <h1 class="hero-title">EL OLIMPO DESCIENDE A SAT&Eacute;LITE</h1>
-      <p class="hero-sub">
-        Est&aacute;s invitado a la primera Boda Inmersiva e Mitol&oacute;gica de M&eacute;xico.
-      </p>
-    </div>
-
-    <div class="scroll-hint">
-      <span>Descubrir</span>
-    </div>
-  </section>
-
-  <div class="sep"></div>
-
-  <!-- ── EL CONCEPTO ── -->
-  <div class="concepto-wrap">
-    <div class="inner">
-      <p class="s-tag r">El Evento</p>
-      <h2 class="s-title r d1">EL CONCEPTO</h2>
-      <div class="concepto-list r d2">
-        <div class="c-item">
-          <img class="c-icon" src="assets/8hour.png" alt="8 Horas de Experiencia Premium" />
-          8 Horas de Experiencia Premium
-        </div>
-        <div class="c-item">
-          <img class="c-icon" src="assets/buffet.png" alt="Banquete de los Dioses" />
-          Banquete de los Dioses &mdash; Buffet Internacional
-        </div>
-        <div class="c-item">
-          <img class="c-icon" src="assets/beer.png" alt="Barra Libre VIP" />
-          Barra Libre VIP Ilimitada
-        </div>
-        <div class="c-item">
-          <img class="c-icon" src="assets/production.png" alt="Producci&oacute;n Audiovisual 3D" />
-          Producci&oacute;n Audiovisual 3D
-        </div>
-        <div class="c-item">
-          <img class="c-icon" src="assets/tornfi.png" alt="Tornafiesta de Gala" />
-          Tornafiesta de Gala
-        </div>
-      </div>
-    </div>
+    <span id="tap-label">Tap to open</span>
   </div>
 
-  <div class="sep"></div>
+  <!-- ═══════════ MAIN PAGE ═══════════ -->
+  <div id="page">
 
-  <!-- ── ¿SERÁS TÚ LA ELEGIDA? ── -->
-  <div class="elegida-wrap">
-    <div class="inner">
-      <div class="elegida-box r">
-        <p class="elegida-title">&iquest;Ser&aacute;s T&uacute; la Elegida?</p>
-        <p class="elegida-body">
-          Durante la noche, el Padre de los Dioses entregar&aacute; la
-          <strong>Manzana de Oro de Eris</strong> a la m&aacute;s bella de la noche.
-        </p>
-        <p class="elegida-body">
-          La ganadora obtendr&aacute; la manzana de oro de <strong>ERIS</strong>,
-          el contrato nupcial, las joyas matrimoniales, lugar en la mesa de Zeus,
-          fotos oficiales y acceso gratuito al pr&oacute;ximo evento.
-          <em>(Participaci&oacute;n voluntaria).</em>
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <video class="hero-video" id="hero-bg" src="zeees.mp4" muted loop playsinline preload="auto">
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <img src="zues.png" alt="ZEUS The Chosen Wife" class="hero-logo" />
+        <h1 class="hero-title">EL OLIMPO DESCIENDE A SAT&Eacute;LITE</h1>
+        <p class="hero-sub">
+          Est&aacute;s invitado a la primera Boda Inmersiva e Mitol&oacute;gica de M&eacute;xico.
         </p>
       </div>
-    </div>
-  </div>
 
-  <div class="sep"></div>
+      <div class="scroll-hint">
+        <span>Descubrir</span>
+      </div>
+    </section>
 
-  <!-- ── LA SEDE ── -->
-  <div class="sede-wrap" style="padding: 2rem 1rem;">
-    <a href="https://maps.google.com/?q=Blvd.+Manuel+Ávila+Camacho+1010,+Bosques+de+Echegaray,+53310+Naucalpan+de+Juárez,+México"
-       target="_blank" rel="noopener noreferrer" style="display: block; max-width: 900px; margin: 0 auto; text-decoration: none;">
-      <img src="assets/reception.jpg" alt="Reception El Olimpo" style="width: 100%; height: auto; border-radius: 4px;" class="r d1" />
-    </a>
-  </div>
+    <div class="sep"></div>
 
-  <div class="sep"></div>
-
-  <!-- ── PREVENTA EXCLUSIVA ── -->
-  <div class="pricing-wrap">
-    <div class="inner">
-      <p class="s-tag r">Asegura Tu Lugar</p>
-      <h2 class="s-title r d1">Preventa Exclusiva</h2>
-      <p class="r d1" style="font-style:italic;color:var(--muted);font-size:clamp(0.9rem,2vw,1.05rem);">
-        Asegura tu entrada al precio m&aacute;s bajo
-      </p>
-
-      <div class="price-grid r d2">
-        <div class="price-card">
-          <span class="p-label">Preventa Exclusiva</span>
-          <span class="p-amount">$2,500</span>
-          <span class="p-currency">MXN</span>
-          <span class="p-per">por persona</span>
-        </div>
-        <div class="price-card">
-          <span class="p-label">Fase General</span>
-          <span class="p-amount">$3,000</span>
-          <span class="p-currency">MXN</span>
-          <span class="p-per">por persona</span>
+    <!-- ── EL CONCEPTO ── -->
+    <div class="concepto-wrap">
+      <div class="inner">
+        <p class="s-tag r">El Evento</p>
+        <h2 class="s-title r d1">EL CONCEPTO</h2>
+        <div class="concepto-list r d2">
+          <div class="c-item">
+            <img class="c-icon" src="assets/8hour.png" alt="8 Horas de Experiencia Premium" />
+            8 Horas de Experiencia Premium
+          </div>
+          <div class="c-item">
+            <img class="c-icon" src="assets/buffet.png" alt="Banquete de los Dioses" />
+            Banquete de los Dioses &mdash; Buffet Internacional
+          </div>
+          <div class="c-item">
+            <img class="c-icon" src="assets/beer.png" alt="Barra Libre VIP" />
+            Barra Libre VIP Ilimitada
+          </div>
+          <div class="c-item">
+            <img class="c-icon" src="assets/production.png" alt="Producci&oacute;n Audiovisual 3D" />
+            Producci&oacute;n Audiovisual 3D
+          </div>
+          <div class="c-item">
+            <img class="c-icon" src="assets/tornfi.png" alt="Tornafiesta de Gala" />
+            Tornafiesta de Gala
+          </div>
         </div>
       </div>
+    </div>
 
-      <p class="pricing-note r d2">
-        Realiza tu pago de preventa hoy y recibe de inmediato tu boleto de acceso oficial.
-        Con este pase digital asegurar&aacute;s tu lugar en el Olimpo y podr&aacute;s ingresar
-        directamente al evento en cuanto se revelen las fechas oficiales.
-      </p>
+    <div class="sep"></div>
 
-      <div class="pricing-cta r d3">
-        &iexcl;Evita el aumento de precio y garantiza tu localidad
-        entre los &uacute;nicos <strong>500 asistentes</strong>!
+    <!-- ── ¿SERÁS TÚ LA ELEGIDA? ── -->
+    <div class="elegida-wrap">
+      <div class="inner">
+        <div class="elegida-box r">
+          <p class="elegida-title">&iquest;Ser&aacute;s T&uacute; la Elegida?</p>
+          <p class="elegida-body">
+            Durante la noche, el Padre de los Dioses entregar&aacute; la
+            <strong>Manzana de Oro de Eris</strong> a la m&aacute;s bella de la noche.
+          </p>
+          <p class="elegida-body">
+            La ganadora obtendr&aacute; la manzana de oro de <strong>ERIS</strong>,
+            el contrato nupcial, las joyas matrimoniales, lugar en la mesa de Zeus,
+            fotos oficiales y acceso gratuito al pr&oacute;ximo evento.
+            <em>(Participaci&oacute;n voluntaria).</em>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="sep"></div>
+    <div class="sep"></div>
 
-  <!-- ── GARANTÍA DE SEGURIDAD ── -->
-  <div class="garantia-wrap">
-    <div style="max-width:48rem; margin:0 auto; text-align:center;">
-      <p class="s-tag r">Seguridad</p>
-      <h2 class="s-title r d1">Garant&iacute;a de Seguridad</h2>
-      <p class="garantia-text r d2">
-        Dep&oacute;sito directo a la cuenta puente corporativa
-        del Complejo Monarqu&iacute;a Coronado.
-      </p>
+    <!-- ── LA SEDE ── -->
+    <div class="sede-wrap" style="padding: 2rem 1rem;">
+      <a href="https://maps.google.com/?q=Blvd.+Manuel+Ávila+Camacho+1010,+Bosques+de+Echegaray,+53310+Naucalpan+de+Juárez,+México"
+        target="_blank" rel="noopener noreferrer"
+        style="display: block; max-width: 1000px; margin: 0 auto; text-decoration: none;">
+        <img src="assets/reception.jpg" alt="Reception El Olimpo" style="width: 100%; height: auto; border-radius: 4px;"
+          class="r d1" />
+      </a>
     </div>
-  </div>
 
-  <div class="sep"></div>
+    <div class="sep"></div>
 
-  <!-- ── INFORMES Y RESERVACIONES ── -->
-  <div class="contact-wrap">
-    <p class="s-tag r">Informes y Reservaciones</p>
-    <p class="contact-script r d1" style="
+    <!-- ── PREVENTA EXCLUSIVA ── -->
+    <div class="pricing-wrap">
+      <div class="inner">
+        <p class="s-tag r">Asegura Tu Lugar</p>
+        <h2 class="s-title r d1">Preventa Exclusiva</h2>
+        <p class="r d1" style="font-style:italic;color:var(--muted);font-size:clamp(0.9rem,2vw,1.05rem);">
+          Asegura tu entrada al precio m&aacute;s bajo
+        </p>
+
+        <div class="price-grid r d2">
+          <div class="price-card">
+            <span class="p-label">Preventa Exclusiva</span>
+            <span class="p-amount">$2,500</span>
+            <span class="p-currency">MXN</span>
+            <span class="p-per">por persona</span>
+          </div>
+          <div class="price-card">
+            <span class="p-label">Fase General</span>
+            <span class="p-amount">$3,000</span>
+            <span class="p-currency">MXN</span>
+            <span class="p-per">por persona</span>
+          </div>
+        </div>
+
+        <p class="pricing-note r d2">
+          Realiza tu pago de preventa hoy y recibe de inmediato tu boleto de acceso oficial.
+          Con este pase digital asegurar&aacute;s tu lugar en el Olimpo y podr&aacute;s ingresar
+          directamente al evento en cuanto se revelen las fechas oficiales.
+        </p>
+
+        <div class="pricing-cta r d3">
+          &iexcl;Evita el aumento de precio y garantiza tu localidad
+          entre los &uacute;nicos <strong>500 asistentes</strong>!
+        </div>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ── GARANTÍA DE SEGURIDAD ── -->
+    <div class="garantia-wrap">
+      <div style="max-width:48rem; margin:0 auto; text-align:center;">
+        <p class="s-tag r">Seguridad</p>
+        <h2 class="s-title r d1">Garant&iacute;a de Seguridad</h2>
+        <p class="garantia-text r d2">
+          Dep&oacute;sito directo a la cuenta puente corporativa
+          del Complejo Monarqu&iacute;a Coronado.
+        </p>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ── INFORMES Y RESERVACIONES ── -->
+    <div class="contact-wrap">
+      <p class="s-tag r">Informes y Reservaciones</p>
+      <p class="contact-script r d1" style="
       font-family: 'Cinzel', serif;
       font-weight: 900;
       letter-spacing: 0.15em;
@@ -739,25 +847,23 @@
       -webkit-text-fill-color: transparent;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
     ">ZEUS</p>
-    <a class="contact-handle r d2"
-       href="https://www.instagram.com/zeus.thechosenwife"
-       target="_blank" rel="noopener noreferrer"
-       style="display:inline-block; color: inherit; text-decoration: none; border-bottom: 1px solid rgba(120,80,30,0.35); padding-bottom: 2px; transition: color 0.25s, border-color 0.25s;"
-       onmouseover="this.style.color='#9A7040'; this.style.borderColor='rgba(120,80,30,0.8)';"
-       onmouseout="this.style.color=''; this.style.borderColor='rgba(120,80,30,0.35)';"
-    >@zeus.thechosenwife</a>
-    <p class="footer-line r d3">
-      The Chosen Wife &nbsp;&bull;&nbsp; El Olimpo Desciende a Sat&eacute;lite
-    </p>
-  </div>
+      <a class="contact-handle r d2" href="https://www.instagram.com/zeus.thechosenwife" target="_blank"
+        rel="noopener noreferrer"
+        style="display:inline-block; color: inherit; text-decoration: none; border-bottom: 1px solid rgba(120,80,30,0.35); padding-bottom: 2px; transition: color 0.25s, border-color 0.25s;"
+        onmouseover="this.style.color='#9A7040'; this.style.borderColor='rgba(120,80,30,0.8)';"
+        onmouseout="this.style.color=''; this.style.borderColor='rgba(120,80,30,0.35)';">@zeus.thechosenwife</a>
+      <p class="footer-line r d3">
+        The Chosen Wife &nbsp;&bull;&nbsp; El Olimpo Desciende a Sat&eacute;lite
+      </p>
+    </div>
 
-</div><!-- /#page -->
+  </div><!-- /#page -->
 
-<!-- Background music -->
-<audio id="bgm" src="assets/wedding-background-music-yxy0nS2O.mp3" loop preload="auto"></audio>
+  <!-- Background music -->
+  <audio id="bgm" src="assets/wedding-background-music-yxy0nS2O.mp3" loop preload="auto"></audio>
 
-<!-- Floating music button (shown from tap onwards) -->
-<button id="music-btn" aria-label="Toggle music" style="
+  <!-- Floating music button (shown from tap onwards) -->
+  <button id="music-btn" aria-label="Toggle music" style="
   display: none;
   position: fixed;
   bottom: 1.6rem;
@@ -775,82 +881,93 @@
   box-shadow: 0 4px 18px rgba(0,0,0,0.3);
   transition: background 0.25s, transform 0.2s, border-color 0.25s;
 " onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-  <svg id="icon-on"  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-  <svg id="icon-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-</button>
+    <svg id="icon-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+    </svg>
+    <svg id="icon-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+      <line x1="23" y1="9" x2="17" y2="15" />
+      <line x1="17" y1="9" x2="23" y2="15" />
+    </svg>
+  </button>
 
-<script>
-(function () {
-  var intro    = document.getElementById('intro');
-  var vid      = document.getElementById('intro-vid');
-  var tap      = document.getElementById('tap-label');
-  var page     = document.getElementById('page');
-  var bgm      = document.getElementById('bgm');
-  var heroBg   = document.getElementById('hero-bg');
-  var musicBtn = document.getElementById('music-btn');
-  var iconOn   = document.getElementById('icon-on');
-  var iconOff  = document.getElementById('icon-off');
-  var entered  = false;
-  var muted    = false;
-  var timer    = null;
+  <script>
+    (function () {
+      var intro = document.getElementById('intro');
+      var vid = document.getElementById('intro-vid');
+      var tap = document.getElementById('tap-label');
+      var page = document.getElementById('page');
+      var bgm = document.getElementById('bgm');
+      var heroBg = document.getElementById('hero-bg');
+      var musicBtn = document.getElementById('music-btn');
+      var iconOn = document.getElementById('icon-on');
+      var iconOff = document.getElementById('icon-off');
+      var entered = false;
+      var muted = false;
+      var timer = null;
 
-  bgm.volume = 0.4;
+      bgm.volume = 0.4;
 
-  function toggleMute() {
-    muted = !muted;
-    bgm.muted = muted;
-    iconOn.style.display  = muted ? 'none'  : 'block';
-    iconOff.style.display = muted ? 'block' : 'none';
-  }
-  musicBtn.addEventListener('click', toggleMute);
+      function toggleMute() {
+        muted = !muted;
+        bgm.muted = muted;
+        iconOn.style.display = muted ? 'none' : 'block';
+        iconOff.style.display = muted ? 'block' : 'none';
+      }
+      musicBtn.addEventListener('click', toggleMute);
 
-  function enterPage() {
-    if (entered) return;
-    entered = true;
-    if (timer) clearTimeout(timer);
-    intro.classList.add('fading');
-    page.classList.add('show');
-    document.body.classList.remove('locked');
-    // Button style: switch to light style for paper background
-    musicBtn.style.background = 'rgba(255,255,255,0.82)';
-    musicBtn.style.borderColor = 'rgba(120,80,30,0.4)';
-    iconOn.style.stroke  = '#7A5628';
-    iconOff.style.stroke = '#7A5628';
-    
-    // Play hero background video now that transition started
-    if (heroBg) {
-      heroBg.play().catch(function(){});
-    }
+      function enterPage() {
+        if (entered) return;
+        entered = true;
+        if (timer) clearTimeout(timer);
+        intro.classList.add('fading');
+        page.classList.add('show');
+        document.body.classList.remove('locked');
+        // Button style: switch to light style for paper background
+        musicBtn.style.background = 'rgba(255,255,255,0.82)';
+        musicBtn.style.borderColor = 'rgba(120,80,30,0.4)';
+        iconOn.style.stroke = '#7A5628';
+        iconOff.style.stroke = '#7A5628';
 
-    setTimeout(function () { intro.classList.add('gone'); }, 1050);
-  }
+        // Play hero background video now that transition started
+        if (heroBg) {
+          heroBg.play().catch(function () { });
+        }
 
-  function startVid() {
-    if (entered) return;
-    tap.style.display = 'none';
-    // Show music button and start music immediately on tap
-    musicBtn.style.display = 'flex';
-    bgm.play().catch(function () {});
-    vid.play().then(function () {
-      timer = setTimeout(enterPage, 4300);
-    }).catch(function () {
-      enterPage();
-    });
-  }
+        setTimeout(function () { intro.classList.add('gone'); }, 1050);
+      }
 
-  intro.addEventListener('click', startVid);
-  vid.addEventListener('ended', enterPage);
-  vid.addEventListener('error', enterPage);
+      function startVid() {
+        if (entered) return;
+        tap.style.display = 'none';
+        // Show music button and start music immediately on tap
+        musicBtn.style.display = 'flex';
+        bgm.play().catch(function () { });
+        vid.play().then(function () {
+          timer = setTimeout(enterPage, 4300);
+        }).catch(function () {
+          enterPage();
+        });
+      }
 
-  // Scroll reveal
-  var items = document.querySelectorAll('.r');
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  items.forEach(function (el) { io.observe(el); });
-})();
-</script>
+      intro.addEventListener('click', startVid);
+      vid.addEventListener('ended', enterPage);
+      vid.addEventListener('error', enterPage);
+
+      // Scroll reveal
+      var items = document.querySelectorAll('.r');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
+
 </html>
