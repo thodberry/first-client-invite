@@ -556,9 +556,49 @@
       .c-item { font-size: 0.68rem; padding: 1.2rem 1.2rem; }
       .elegida-box { padding: 2.5rem 1.2rem; }
     }
+    
+    /* ══════════════════════════════════════
+       WATERMARK
+    ══════════════════════════════════════ */
+    .watermark {
+      position: fixed;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      z-index: 999999;
+      pointer-events: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      transform: rotate(-35deg);
+      opacity: 0.18;
+      user-select: none;
+    }
+    .watermark span {
+      font-family: var(--font-body), sans-serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+      margin: 2rem 4rem;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
+
+<!-- WATERMARK -->
+<div class="watermark" aria-hidden="true">
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+  <span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span><span>Pre-Sale Demo</span>
+</div>
 
 <!-- ═══════════ INTRO OVERLAY ═══════════ -->
 <div id="intro">
