@@ -320,11 +320,21 @@
     .c-item:last-child { border-bottom: none; }
     .c-item:hover { background: rgba(120,80,30,0.06); }
 
-    .c-emoji {
-      font-size: 1.2rem;
+    .c-icon {
+      width: 1.8rem;
+      height: 1.8rem;
       flex-shrink: 0;
-      line-height: 1;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
+      fill: none;
+      stroke: var(--gold-light);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 2px 4px rgba(120,80,30,0.25));
+      transition: stroke 0.3s;
+    }
+    
+    .c-item:hover .c-icon {
+      stroke: #E2C98A;
     }
 
     /* ══════════════════════════════════════
@@ -649,11 +659,26 @@
       <p class="s-tag r">El Evento</p>
       <h2 class="s-title r d1">EL CONCEPTO</h2>
       <div class="concepto-list r d2">
-        <div class="c-item"><span class="c-emoji">⚡</span>8 Horas de Experiencia Premium</div>
-        <div class="c-item"><span class="c-emoji">🍽️</span>Banquete de los Dioses &mdash; Buffet Internacional</div>
-        <div class="c-item"><span class="c-emoji">🥂</span>Barra Libre VIP Ilimitada</div>
-        <div class="c-item"><span class="c-emoji">🎬</span>Producci&oacute;n Audiovisual 3D</div>
-        <div class="c-item"><span class="c-emoji">🎊</span>Tornafiesta de Gala</div>
+        <div class="c-item">
+          <svg class="c-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          8 Horas de Experiencia Premium
+        </div>
+        <div class="c-item">
+          <svg class="c-icon" viewBox="0 0 24 24"><path d="M4 17c0-4.4 3.6-8 8-8s8 3.6 8 8Z"/><path d="M2 17h20"/><circle cx="12" cy="7" r="2"/></svg>
+          Banquete de los Dioses &mdash; Buffet Internacional
+        </div>
+        <div class="c-item">
+          <svg class="c-icon" viewBox="0 0 24 24"><path d="M8 22h8"/><path d="M12 15v7"/><path d="M7 3l1.2 8.4A4.1 4.1 0 0 0 12 15h0a4.1 4.1 0 0 0 3.8-3.6L17 3H7Z"/></svg>
+          Barra Libre VIP Ilimitada
+        </div>
+        <div class="c-item">
+          <svg class="c-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="7" y1="3" x2="7" y2="21"/><line x1="17" y1="3" x2="17" y2="21"/><line x1="2" y1="9" x2="7" y2="9"/><line x1="2" y1="15" x2="7" y2="15"/><line x1="17" y1="9" x2="22" y2="9"/><line x1="17" y1="15" x2="22" y2="15"/></svg>
+          Producci&oacute;n Audiovisual 3D
+        </div>
+        <div class="c-item">
+          <svg class="c-icon" viewBox="0 0 24 24"><path d="M2 12c0-3 3-5 10-5s10 2 10 5-2.5 5-5 5c-2.5 0-3-2-5-2s-2.5 2-5 2-5-2-5-5z"/><circle cx="8" cy="11" r="1.5"/><circle cx="16" cy="11" r="1.5"/></svg>
+          Tornafiesta de Gala
+        </div>
       </div>
     </div>
   </div>
