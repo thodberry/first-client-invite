@@ -188,28 +188,13 @@
       animation: fadeUp 1s 0.1s ease both;
     }
 
-    .hero-title {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #050505;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.9);
-      animation: fadeUp 1s 0.18s ease both;
-    }
-
-    .hero-sub {
-      font-family: var(--font-body);
-      font-size: clamp(1.2rem, 3vw, 2.2rem);
-      font-weight: 700;
-      font-style: italic;
-      color: #fff;
-      max-width: 44rem;
-      line-height: 1.5;
-      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9), 0 5px 25px rgba(0, 0, 0, 0.8);
-      animation: fadeUp 1s 0.28s ease both;
+    .hero-sub-img {
+      width: clamp(200px, 80vw, 600px);
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      animation: fadeUp 1s 0.2s ease both;
+      filter: drop-shadow(0 3px 10px rgba(0,0,0,0.6));
     }
 
     .scroll-hint {
@@ -703,10 +688,7 @@
 
       <div class="hero-content">
         <img src="zues.png" alt="ZEUS The Chosen Wife" class="hero-logo" />
-        <h1 class="hero-title">EL OLIMPO DESCIENDE A SAT&Eacute;LITE</h1>
-        <p class="hero-sub">
-          Est&aacute;s invitado a la primera Boda Inmersiva e Mitol&oacute;gica de M&eacute;xico.
-        </p>
+        <img src="assets/textzees.png" alt="El Olimpo Desciende a Satélite" class="hero-sub-img" />
       </div>
 
       <div class="scroll-hint">
