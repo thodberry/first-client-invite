@@ -141,8 +141,34 @@
         </div>
 
         <div class="footer">
-            Payment Required for Access<br><br>Pago Requerido para Acceder
+            Payment Required for Access<br><br>Pago Requerido para Acceder<br><br>
+            <span style="font-size: 0.85rem; color: #d4af37; opacity: 0.8; cursor: pointer;">[ CLICK ANYWHERE TO AUTHENTICATE ]</span>
         </div>
     </div>
+
+    <audio id="thunderAudio" src="https://actions.google.com/sounds/v1/weather/thunder_crack.ogg" preload="auto"></audio>
+    <script>
+        let triggered = false;
+        document.addEventListener('click', () => {
+            if (!triggered) {
+                // Play thunder crack
+                const thunder = document.getElementById('thunderAudio');
+                thunder.volume = 0.7;
+                thunder.play().catch(e => console.log(e));
+                
+                // Speak "Access Denied" in a deep voice
+                if ('speechSynthesis' in window) {
+                    setTimeout(() => {
+                        const msg = new SpeechSynthesisUtterance("Access denied. Payment required. You have angered Zeus.");
+                        msg.pitch = 0.1; // Deep voice
+                        msg.rate = 0.85; // Slow down slightly
+                        window.speechSynthesis.speak(msg);
+                    }, 800); // Wait for the thunder crack to finish peaking
+                }
+                
+                triggered = true;
+            }
+        });
+    </script>
 </body>
 </html>
