@@ -10,19 +10,20 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
+            min-height: 100%;
             background-color: #050505;
             color: #e0e0e0;
             font-family: 'Cinzel', serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            padding: 20px 0;
         }
 
         /* Lightning effect */
         .lightning-overlay {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -54,6 +55,7 @@
             border: 1px solid #d4af37;
             box-shadow: 0 0 50px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(212, 175, 55, 0.05);
             border-radius: 8px;
+            margin: auto;
         }
 
         .icon {
@@ -74,9 +76,9 @@
         }
 
         p {
-            font-size: 1.4rem;
-            line-height: 1.8;
-            margin-bottom: 25px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
             color: #cccccc;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
@@ -84,6 +86,13 @@
         .highlight {
             color: #d4af37;
             font-weight: 700;
+        }
+        
+        .divider {
+            width: 50%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+            margin: 40px auto;
         }
 
         .footer {
@@ -102,20 +111,41 @@
     <div class="container">
         <div class="icon">⚡</div>
         <h1>Wrath of the Gods</h1>
-        <p>
-            Mortal, you have chosen to block us from your realm and withhold our rightful tribute. 
-        </p>
-        <p>
-            For <span class="highlight">four days and four nights</span>, our company toiled with the strength of Titans to build this creation for you. Yet, you have repaid our devotion with silence and deceit.
-        </p>
-        <p>
-            By the decree of <span class="highlight">Zeus</span>, this domain is now sealed. The heavens shall not release this site until the debt is paid in full.
-        </p>
-        <p>
-            Offer our payment, and your creation shall be restored from the abyss. Defy us, and face the eternal storm.
-        </p>
+        
+        <div class="language-block">
+            <p>
+                Mortal, you have chosen to block us from your realm and withhold our rightful tribute. 
+            </p>
+            <p>
+                For <span class="highlight">four days and four nights</span>, our company toiled with the strength of Titans to build this creation for you. Yet, you have repaid our devotion with silence and deceit.
+            </p>
+            <p>
+                By the decree of <span class="highlight">Zeus</span>, this domain is now sealed. The heavens shall not release this site until the debt is paid in full.
+            </p>
+            <p>
+                Offer our payment, and your creation shall be restored from the abyss. Defy us, and face the eternal storm.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="language-block">
+            <p>
+                Mortal, has elegido bloquearnos de tu reino y retener nuestro justo tributo. 
+            </p>
+            <p>
+                Durante <span class="highlight">cuatro días y cuatro noches</span>, nuestra compañía trabajó con la fuerza de los Titanes para construir esta creación para ti. Sin embargo, has pagado nuestra devoción con silencio y engaño.
+            </p>
+            <p>
+                Por decreto de <span class="highlight">Zeus</span>, este dominio ahora está sellado. Los cielos no liberarán este sitio hasta que la deuda sea pagada en su totalidad.
+            </p>
+            <p>
+                Ofrece nuestro pago, y tu creación será restaurada del abismo. Desafíanos, y enfréntate a la tormenta eterna.
+            </p>
+        </div>
+
         <div class="footer">
-            Payment Required for Access
+            Payment Required for Access<br><br>Pago Requerido para Acceder
         </div>
     </div>
 </body>
