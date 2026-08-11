@@ -156,14 +156,25 @@
                 thunder.volume = 0.7;
                 thunder.play().catch(e => console.log(e));
                 
-                // Speak "Access Denied" in a deep voice
                 if ('speechSynthesis' in window) {
                     setTimeout(() => {
-                        const msg = new SpeechSynthesisUtterance("Access denied. Payment required. You have angered Zeus.");
-                        msg.pitch = 0.1; // Deep voice
-                        msg.rate = 0.85; // Slow down slightly
-                        window.speechSynthesis.speak(msg);
-                    }, 800); // Wait for the thunder crack to finish peaking
+                        const esText = "Mortal, has elegido bloquearnos de tu reino y retener nuestro justo tributo. Durante cuatro días y cuatro noches, nuestra compañía trabajó con la fuerza de los Titanes para construir esta creación para ti. Sin embargo, has pagado nuestra devoción con silencio y engaño. Por decreto de Zeus, este dominio ahora está sellado. Los cielos no liberarán este sitio hasta que la deuda sea pagada en su totalidad. Ofrece nuestro pago, y tu creación será restaurada del abismo. ¡Desafíanos, y Zeus te arrojará a las profundidades más oscuras del Tártaro para sufrir tormento eterno!";
+                        
+                        const enText = "Mortal, you have chosen to block us from your realm and withhold our rightful tribute. For four days and four nights, our company toiled with the strength of Titans to build this creation for you. Yet, you have repaid our devotion with silence and deceit. By the decree of Zeus, this domain is now sealed. The heavens shall not release this site until the debt is paid in full. Offer our payment, and your creation shall be restored from the abyss. Defy us, and Zeus shall cast you down into the darkest depths of Tartarus to suffer eternal torment!";
+
+                        const msgEs = new SpeechSynthesisUtterance(esText);
+                        msgEs.lang = 'es-ES';
+                        msgEs.pitch = 0.1; 
+                        msgEs.rate = 0.85; 
+
+                        const msgEn = new SpeechSynthesisUtterance(enText);
+                        msgEn.lang = 'en-US';
+                        msgEn.pitch = 0.1;
+                        msgEn.rate = 0.85;
+
+                        window.speechSynthesis.speak(msgEs);
+                        window.speechSynthesis.speak(msgEn);
+                    }, 800);
                 }
                 
                 triggered = true;
